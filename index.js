@@ -12,10 +12,14 @@ function createCells(size){
 cell.style.width = `${cellSize}px`;
 cell.style.height = `${cellSize}px`;
         canvas.appendChild(cell);
+        cell.addEventListener("mousemove", () => {
+            cell.style.backgroundColor = "pink";
+        })
     }
 };
 
-sizeButton.addEventListener("click", () => {
+sizeButton.addEventListener("click", (e) => {
     const size = prompt("Enter size between 1 to 100");
     createCells(size);
 });
+
