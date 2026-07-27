@@ -33,3 +33,12 @@ sizeButton.addEventListener("click", (e) => {
     createCells(size);
 });
 
+clearButton.addEventListener("click", () => {
+    const cells = document.querySelectorAll(".grid-cell");
+    for(const eachCell of cells){
+        eachCell.style.backgroundColor = "white";
+        eachCell.dataset.opacity = "0";
+
+    }
+})
+
